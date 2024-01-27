@@ -3,41 +3,31 @@
 using namespace std;
 
 int main() {
-    // Using string literals
-    string greeting = "Hello, World!";
+    string firstName = "CodeStory";
+    cout<<firstName<<endl;
 
-    // Using string constructor
-    string name("CodeStoryKH");
+    string lastName("KH");
+    cout<<lastName<<endl;
 
-    // Concatenating strings
-    string fullGreeting = greeting + " " + name;
-    cout<<"Concatenating strings"<<fullGreeting<<endl;
+    string fullName = firstName + " " + lastName;
+    cout<<fullName<<endl;
 
+    //substring
+    string subString = fullName.substr(10, 2);
+    cout<<"Substring: "<<subString<<endl;
+    //find
+    size_t myFindStr = fullName.find("KH");
+    cout<<"Find string: "<<myFindStr<<endl;
+    //replace
+    fullName.replace(0, 9, "Hello, ");
+    cout<<"Replace func: "<<fullName<<endl;
+    //length
+    cout<<"Length: "<<fullName.length()<<endl;
 
-    string sentence = "Programming is fun!";
-    // Extracting a substring
-    string sub = sentence.substr(0, 11); // "Programming"
-    cout<<"Extracting substring: " <<sub<<endl;
-
-    // Finding a substring
-    size_t position = sentence.find("fun");
-    cout<<"Finding substring: " <<position<<endl;
-
-    // Replacing a portion of the string
-    sentence.replace(position, 3, "exciting");
-    cout<<"Replacing a portion of the string: " <<sentence<<endl;
-
-    // Appending another string
-    sentence.append(" Enjoy it!");
-    cout<<"Appending another string: " <<sentence<<endl;
-
-    cout << sentence << endl;
-
-    // User input
+    //cin and cout
     string userInput;
-    cout << "Enter your name: ";
+    cout<<"Please input username: "<<endl;
     cin >> userInput;
-    cout << "Hello, " << userInput << "!" << endl;
-
+    cout<<"Hello, "<<userInput<<endl;
     return 0;
 }
