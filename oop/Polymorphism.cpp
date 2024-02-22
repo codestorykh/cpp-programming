@@ -36,8 +36,6 @@ int main() {
     Circle circle;
     Square square;
 
-    shapePtr = &shapePtr;
-    shapePtr->draw();
     shapePtr = &circle;
     shapePtr->draw();  // Calls Circle::draw()
 
